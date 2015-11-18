@@ -1,0 +1,59 @@
+ASSIGNMENT	1
+
+
+In	this	assignment,	you	will	use	a	random	number	generator	to	simulate	a	game	of	craps	
+and	implement	some	simple	machine	learning	strategies	to	automate	your	wager.
+You	can	read	more	about	the	game	of	craps	at	
+http://www.math.uah.edu/stat/games/Craps.html.	You	will	only	be	implementing	the	pass	
+bet.	Remember	the	following	for	the	pass	bet:
+1.	If	on	the	first	roll	of	dice,	the	sum	is	7 or	11,	you	win. If	the	sum	is	2,	3	or	12,	you	lose.
+2.	After	the	first	roll	of	dice,	if	the	value	of	the	first	roll	repeats	before	the	number	7,	you	
+win. If	the	number	7	appears	before	the	repetition	of	the	first	roll,	you	lose.
+If	you	win,	the	winning	amount	is	equal	to	the	wager	amount.	For	example,	if	you	wager	
+$100,	you	win	$100.
+You	start	off	with a	balance	of $1000	and	play	10	games	or	until you	run	out	of	money.
+The	wagering	strategies	will	be	as	follows:
+1.	Even	wager: On	every	roll,	you	wager	$100,	irrespective	of	previous	win	or	loss.
+2.	Martingale	System:	You	can	read	about	it	
+https://en.wikipedia.org/wiki/Craps#Martingale_system.	Basic	idea	is	that	if	you	win,	in	
+the	next	bet	you	wager	$100.	If	you	lose,	you	double	previous	wager.
+Note:	If	you	don’t	have	enough	balance	to	double	previous	wager,	then	you	should play	
+with	whatever	is	remaining.	That	is,	if	you	have	to	wager	$800,	but	you	only	have	$600	
+available,	then	bet	$600.
+Example:
+Game	# Starting	Balance Wager Outcome
+1 1000 100 Loss
+2 900 200 Loss
+3 700 400 Win
+4 1100 100 Win
+5 1200 100 Loss
+6 1100 200 Win
+.. .. … ..
+3.	Reverse	Martingale	System: In	this	case,	you	double	your	wager	in	case	of	win	and	
+keep	constant	in	case	of	loss.
+Note:	If	you	don’t	have	enough	balance	to	double	previous	wager,	then	you	should	play	
+with	whatever	is	remaining.	That	is,	if	you	have	to	wager	$800,	but	you	only	have	$600	
+available,	then	bet	$600.
+Game	# Starting	Balance Wager Outcome
+1 1000 100 Loss
+2 900 100 Loss
+3 800 100 Win
+4 900 200 Win
+5 1100 400 Win
+6 1500 800 Loss
+7 700 100 Loss
+You	have	to	implement	these	three	simple	algorithms and	play	5	rounds	with	maximum	10	
+games	each	using	the	three	strategies.	To	clarify,	in	round	1,	you	will	play	up	to 10	games	
+using	strategy	1,	2,	and	3	respectively.
+Output	the	result	to	a	text	file	in	following	format (no	need	for	fancy	tables,	even	tab	or	
+comma	separated	output	is	fine)	:
+Round	1:
+Strategy Number	of	games Ending	Balance
+1 10 $1500
+2 10 $2400
+3 4 $0
+Round	2:
+….
+You	can	use	R,	Java,	or	Python	for	this.	Include	source	code,	output	file,	and	a	README	file	
+for	compiling	your	code.	In	the	README	file,	also	include	a	short	sentence	explaining	which	
+strategy	you	think	worked	the	best	for	you.
